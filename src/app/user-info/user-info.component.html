@@ -1,0 +1,12 @@
+<h3>Repositories</h3>
+<img src="../../assets/tenor.gif" *ngIf="showLoader" class="img-position">
+<div class="list-group mb-3" *ngFor="let item of repoInfo">
+  <a class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1" style="color:#007bff">{{item.name}}</h5>
+      <small>{{item.created_at | date}}</small>
+    </div>
+    <p class="mb-1">{{item.description}}</p>
+    <small>Total Views : {{item.watchers}}</small>
+  </a>
+</div>
